@@ -1,0 +1,8 @@
+librosa==0.8.1
+numpy==1.21.5
+opencv_python==4.5.5.64
+paddlehub==2.2.0
+paddlespeech==0.1.2
+PyAudio==0.2.11
+SoundFile==0.10.3.post1
+webrtcvad==2.0.10
