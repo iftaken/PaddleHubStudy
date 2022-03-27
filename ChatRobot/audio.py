@@ -1,10 +1,7 @@
 import os
-from cv2 import log
-import librosa
 import soundfile as sf
 import pyaudio
 import wave
-import webrtcvad
 import logging
 import numpy as np
 import struct
@@ -24,7 +21,6 @@ class Audio:
     def __init__(self) -> None:
         self.p = pyaudio.PyAudio()
         
-        self.vad = webrtcvad.Vad(1)
         self.sample_rate=16000
         
         
