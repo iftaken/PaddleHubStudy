@@ -1,21 +1,13 @@
-from email.mime import audio
 import paddlehub as hub
 from paddlespeech.cli.tts.infer import TTSExecutor
 from paddlespeech.cli.asr.infer import ASRExecutor
 import os
 import librosa
 import soundfile as sf
-import pyaudio
-import wave
-import webrtcvad
 from audio import Audio
 import logging
     
     
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s %(filename)s %(levelname)s %(message)s',
-                    datefmt='%a %d %b %Y %H:%M:%S',
-                    )
 
 class Robot:
     def __init__(self) -> None:
@@ -131,5 +123,4 @@ if __name__ == '__main__':
     robot = Robot()
     robot.init()
     robot.start()
-    # robot.record("../wav/record.wav")
     

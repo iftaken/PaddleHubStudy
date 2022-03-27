@@ -9,11 +9,6 @@ import logging
 import numpy as np
 import struct
 
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s %(filename)s %(levelname)s %(message)s',
-                    datefmt='%a %d %b %Y %H:%M:%S',
-                    )
-
 
 # webrtcvad 人声检测效果太差，vad 选择自制算法用能量计算
 

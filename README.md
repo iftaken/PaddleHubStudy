@@ -5,6 +5,7 @@
 ## 运行方法
 
 ```shell
+cd ChatRobot
 pip install -r requirements.txt
 python robot.py
 ```
