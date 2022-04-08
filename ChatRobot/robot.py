@@ -1,4 +1,5 @@
 import paddlehub as hub
+from paddlenlp import Taskflow
 from paddlespeech.cli.tts.infer import TTSExecutor
 from paddlespeech.cli.asr.infer import ASRExecutor
 import os
@@ -12,7 +13,7 @@ import logging
 class Robot:
     def __init__(self) -> None:
         self.asr_model = ASRExecutor()
-        self.chat_model = hub.Module(name="plato-mini")
+        self.chat_model = Taskflow("dialogue")
         self.tts_model = TTSExecutor()
         
         self.audio = Audio()
@@ -97,7 +98,7 @@ class Robot:
         return res
 
     def chat(self, text):
-        result = self.chat_model.predict([text])
+        result = self.chat_model([text])
         return result[0]
     
     def guide(self):
